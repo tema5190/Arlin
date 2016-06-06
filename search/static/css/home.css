@@ -1,0 +1,101 @@
+body {
+
+font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+
+background-color: #fff;
+background-size: 5170% 7900%;
+
+}
+
+.image{
+content:url("http://i.imgur.com/oyt3pDE.png");
+width:180px;
+height:150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.container{
+margin-left: auto;
+    margin-right: auto;
+position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+h2{
+    color: #c5cad6;
+text-align:center;
+position: relative 
+}
+
+p{
+    color: #c5cad6;
+
+position: relative 
+}
+
+#button1 {
+	-moz-box-shadow: 2px 2px 0px 0px #c5cad6;
+	-webkit-box-shadow: 2px 2px 0px 0px #c5cad6;
+	box-shadow: 2px 2px 0px 0px #c5cad6;
+	background-color:#fff;
+	border:1px solid #A9A9A9;
+	display:inline-block;
+	cursor:pointer;
+	color:#c5cad6;
+	font-family:Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, "URW Palladio L", "Nimbus Roman No9 L", serif;
+	font-size:15px;
+	padding:6px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+#button1:hover {
+	background-color:#fff;
+	color:#FF8000;
+}
+button1:active {
+	position:relative;
+	top:1px;
+}
+
+
+#text1 {
+    border: 2px solid #A9A9A9;
+    height: 31px;
+    margin-left: auto;
+position: relative 
+    margin-right: auto;
+    width: 223px;
+    box-shadow: 0 0 27px rgb(204, 204, 204) inset;
+    transition: 500ms all ease;
+    padding: 3px 3px 3px 3px;
+}
+
+#text1 {
+    margin-left: auto;
+    margin-right: auto;
+            background: #FFF;
+            height: 25px;
+position: relative 
+            width: 150x;
+            border:1px solid #A9A9A9;
+            color: #696969;
+            padding-left: 1.5em;
+            outline: none;
+            box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%)
+}
+
+
+#text1:hover,
+#text1:focus {
+    width: 260px;
+    transition: 500ms all ease;
+position: relative 
+    background-size: 25px 25px;
+    background-position: 96% 62%;
+    padding: 3px 32px 3px 3px;
+}

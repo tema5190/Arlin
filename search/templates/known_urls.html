@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <title>Arlin</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="http://i.imgur.com/oyt3pDE.png")">
+    <link href="{% static "css/known.css" %}" rel="stylesheet">
+  </head>
+    <div class="image"></div>
+    <div class="container">
+        <h1>Cписок URL</h1>
+            <input type="submit" align="center" name="update" value="Обновить" style="width: 80%; height: 25px; font-size: 10px" >
+      </div>
+
+
+        {% for url in urls %}
+            <h3>{{url.id}}) {{url.url}}</h3>
+        {% endfor %}
+
+    </div>
+  </body>
+</html>

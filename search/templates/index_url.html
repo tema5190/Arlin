@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+        <meta charset="UTF-8">
+        <link rel="icon" href="http://i.imgur.com/oyt3pDE.png")">
+        <title>Arlin</title>
+        <link rel="stylesheet" href={% static "css/index.css" %}>
+</head>
+
+   <div class="image"></div>
+    <div class="container">
+   
+      <div class="starter-template" align="center">
+        <h1>Добавить URL</h1>
+      </div>
+
+      <div align="center">
+        <form  method="GET" action="indexing_url">
+            <input type="url" name="url" style="height: 20px; width: 60%; font-size: 35pt; role: combobox;"/>
+            <input type="submit" align="center" name ="add_url" value="Выполнить" style="width: 15%; height: 30px; font-size: 15px" >
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

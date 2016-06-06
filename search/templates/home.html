@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+        <meta charset="UTF-8">
+        <link rel="icon" href="http://i.imgur.com/oyt3pDE.png")">
+        <title>Arlin</title>
+        <link rel="stylesheet" href={% static "css/home.css" %}>
+</head>
+<body>
+        <!-- Кривое меню -->
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="">Search</a></li>
+            <li><a href="indexing_view">Index URLs</a></li>
+            <li><a href="known_urls_view">Known URLs</a></li>
+          </ul>
+        </div>
+
+        <!-- Отображение поисковой строки и кнопки поиска -->
+        <div class="container">
+                <div class="image"></div>
+                <p>Найдется все.</p>
+            <form method="get">
+                <input type="text" name="input" id="text1">
+                <input type="submit" name="search_button" id="button1" value="Искать">
+            </form>
+        </div>
+</body>
+</html>
+
