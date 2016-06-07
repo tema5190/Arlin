@@ -17,7 +17,3 @@ def index_url(request):
 
 def known_urls(request):
     return render(request,'known_urls.html')
-
-def results(request):
-
-    return render(request,'results.html')
