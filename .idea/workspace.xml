@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71a780fd-088d-47ae-88ad-237b51f5ef2e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/templates/index_url.html" afterPath="$PROJECT_DIR$/search/templates/index_url.html" />
     </list>
@@ -79,12 +78,12 @@
       <file leaf-file-name="index_url.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search/templates/index_url.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+            <state relative-caret-position="235">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <marker date="1465315032402" expanded="false" signature="1052:1093" ph="..." />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#2;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#2;n#html#0;n#!!top" expanded="true" />
+                <marker date="1465315943655" expanded="false" signature="1441:1482" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,8 +104,8 @@
       <file leaf-file-name="known_urls.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search/templates/known_urls.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="6" column="59" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="59" />
+            <state relative-caret-position="328">
+              <caret line="21" column="14" selection-start-line="10" selection-start-column="1" selection-end-line="21" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -637,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465314757873</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="07.06.2016&#10;">
+      <created>1465315695204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1465315695204</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -932,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -962,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/templates/known_urls.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="6" column="59" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -978,14 +966,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/search/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/templates/known_urls.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="21" column="14" selection-start-line="10" selection-start-column="1" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search/templates/index_url.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        <state relative-caret-position="235">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <marker date="1465315032402" expanded="false" signature="1052:1093" ph="..." />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#1;n#div#2;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#1;n#div#2;n#html#0;n#!!top" expanded="true" />
+            <marker date="1465315943655" expanded="false" signature="1441:1482" ph="..." />
           </folding>
         </state>
       </provider>
