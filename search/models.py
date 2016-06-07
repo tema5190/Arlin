@@ -11,7 +11,7 @@ class URL(models.Model):
 
 class URL_Index(models.Model):
     url = models.ForeignKey(URL)
-    word = models.ForeignKey(Word)
+    text = models.ForeignKey(Word)
     count = models.IntegerField(default=0)
 
     def __eq__(self, other):
