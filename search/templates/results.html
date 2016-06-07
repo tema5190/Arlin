@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="icon" href="{% static "pictures/logo.png" %}">
         <title>Arlin</title>
-        <link rel="stylesheet" href={% static "css/home.css" %}>
+        <link rel="stylesheet" href={% static "css/results.css" %}>
 </head>
 <body>
         <!-- Кривое меню -->
@@ -13,7 +13,7 @@
 <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
-                       <a href="home_view">
+                       <a href="">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
                             Домашняя страница
@@ -40,7 +40,7 @@
 
                 </li>
                 <li class="has-subnav">
-                    <a href="results_view">
+                    <a href="#">
                        <i class="fa fa-folder-open fa-2x"></i>
                         <span class="nav-text">
                             Просмотреть результаты
@@ -51,17 +51,7 @@
         </nav>
         <!-- Отображение поисковой строки и кнопки поиска -->
         <div class="container">
-                <div class="image"></div>
-                <p>Найдется все.</p>
-            <form method="get">
                 <input type="text" name="input" id="text1">
-                <input type="submit" name="search_button" id="button1" value="Искать">
-            </form>
-            <h2>
-                {% for i in context %}
-                    <a i />
-                {% endfor %}
-            </h2>
         </div>
 </body>
 </html>
