@@ -9,20 +9,6 @@
 </head>
 
    <div class="image"></div>
-<div class="area"></div><nav class="main-menu">
-            <ul>
-                <li>
-                        <a href="/">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
-                            Домашняя страница
-                        </span>
-                    </a>
-
-                </li>
-            </ul>
-        </nav>
-
     <div class="container">
    
       <div class="starter-template" align="center">
@@ -31,8 +17,20 @@
 
       <div align="center">
         <form  method="GET" action="indexing_url">
-            <input type="url" name="url" style="height: 20px; width: 60%; font-size: 35pt; role: combobox;"/>
-            <input type="submit" align="center" name ="add_url" value="Выполнить" style="width: 15%; height: 30px; font-size: 15px" >
+            <input type="url" name="url" style="height: 20px; width: 60%; font-size: 35pt; role: combobox;"/> <br> <br>
+            <table align="left" style="width: 300px;">
+              <tr>
+                <td>
+                  Ширина:
+                  <input type="text" name="width" value="1"/>
+
+                  Глубина:
+                  <input type="text" name="depth" value="1"/>
+                </td>
+              </tr>
+            </table>
+            <br> </br>
+            <input type="submit" align="center" value="Выполнить" style="width: 15%; height: 30px; font-size: 15px" >
         </form>
       </div>
     </div>
