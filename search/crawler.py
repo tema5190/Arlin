@@ -1,6 +1,6 @@
-import urllib2
 from bs4 import BeautifulSoup
 import robotparser
+import urllib2
 import re
 
 class Crawler(object):
@@ -15,9 +15,10 @@ class Crawler(object):
         robot.read()
 
         return robot.can_fetch('*',url)#:
-            #return True
+        #return True
         #else:
-         #   return False
+        #return False
+
 
     def define_root_url(self,url):
         self.root_url = url
