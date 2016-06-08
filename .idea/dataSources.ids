@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Django default" uuid="d9f3b487-6975-4440-a328-45849dbf8ff1">
+  <data-source name="Django default" uuid="e235b94c-c515-4546-907c-eb24024004b9">
     <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -104,7 +104,7 @@
     </table>
     <table name="search_url" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="url_string" sqlType="VARCHAR(1200)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR(1200)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
     <table name="search_url_index" schema="" catalog="" type="TABLE">

@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+from BeautifulSoup import BeautifulSoup
 import robotparser
 import urllib2
 from indexer import Indexer
@@ -22,9 +22,12 @@ class Crawler(object):
     def define_root_url(self,url):
         self.root_url = url
 
-    def add_included_suburls(self,soup):
-        refs = soup.findall('a')
+    def add_included_suburls(self, soup):
+
         urls = set()
+
+        refs = soup.findAll('a')
+
 
         for ref in refs:
             try:
@@ -36,7 +39,10 @@ class Crawler(object):
             if len(href) < 2:
                 continue
 
-            if href.first() != '/':
+            if '//' in href:
+                continue
+
+            if href[0] != '/':
                 continue
 
             if self.root_url in href:
@@ -49,7 +55,7 @@ class Crawler(object):
     def get_pair_word_and_count(self, soup):
 
         def visible(element):
-            if element.parent.name in ['head','script','style','document']:
+            if element.parent.name in ['head','script','style','[document]']:
                 return False
 
             if re.match('<--.*-->',str(element)):
@@ -61,12 +67,13 @@ class Crawler(object):
             return True
 
 
-        data = soup.findALL(text = True)
+        data = soup.findAll(text = True)
 
         visible_text = filter(visible, data)
         words = list()
+
         for text in visible_text:
-            result = re.findall(r'[0-9a-z]',text.lower())
+            result = re.findall(r'[0-9a-z]+',text.lower())
 
             for res in result:
                 words.append(res)
@@ -76,7 +83,7 @@ class Crawler(object):
         return Counter(words)
 
 
-    def visit(self,url,width,depth):
+    def visit(self, url, width, depth):
 
         if depth<0:
             return
@@ -84,8 +91,8 @@ class Crawler(object):
         if not self.pass_robot_txt(url):
            raise Exception("robot.txt founded")
 
-        cur_url = url
-        self.indexer.add_url(cur_url)
+        current_url = url
+        self.indexer.add_url(current_url)
 
         depth = depth - 1
 
@@ -96,6 +103,7 @@ class Crawler(object):
             return
 
         soup = BeautifulSoup(html)
+
         urls = self.add_included_suburls(soup)
 
         for url in urls:
@@ -111,7 +119,7 @@ class Crawler(object):
 
         words = self.get_pair_word_and_count(soup).iteritems()
 
-        self.indexer.create_index(words,cur_url )
+        self.indexer.create_index(words, current_url)
 
     def run(self,url,width,depth):
         self.define_root_url(url)

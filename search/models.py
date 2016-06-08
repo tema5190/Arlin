@@ -7,7 +7,7 @@ class Word(models.Model):
     string = models.CharField(max_length = 300)
 
 class URL(models.Model):
-    url_string = models.URLField(max_length = 1200)
+    url = models.URLField(max_length = 1200)
 
 class URL_Index(models.Model):
     url = models.ForeignKey(URL)
@@ -15,7 +15,7 @@ class URL_Index(models.Model):
     count = models.IntegerField(default=0)
 
     def __eq__(self, other):
-        return self.url.url_string == other.url.url_string
+        return self.url.url == other.url.url
 
     def __hash__(self):
-        return hash(self.url.url_string)
+        return hash(self.url.url)
