@@ -112,3 +112,7 @@ class Crawler(object):
         words = self.get_pair_word_and_count(soup).iteritems()
 
         self.indexer.create_index(words,cur_url )
+
+    def run(self,url,width,depth):
+        self.define_root_url(url)
+        self.visit(url,width,depth)
