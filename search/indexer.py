@@ -1,11 +1,13 @@
 from models import Word,URL,URL_Index
 import re
 from collections import Counter
+from __future__ import unicode_literals
 
 class Indexer(object):
 
-    def index_words(self, words):
+    def add_words(self, pair_word_and_count):
 
+        words = pair_word_and_count
         res = []
         for word in words:
             if not Word.objects.filter(text = word).exists():
@@ -14,12 +16,12 @@ class Indexer(object):
         Word.objects.bulk_create(res)
 
 
-    def index_url(self,url):
+    def add_url(self,url):
 
         if not URL.objects.filter(url = url).exists():
             URL.objects.create(url=url)
 
-    def indexing(self, words, url):
+    def create_index(self, words, url):
 
         temp = URL.objects.get(url = url)
 
@@ -39,10 +41,9 @@ class Indexer(object):
         urls_index = URL_Index.objects.filter(text__in=words)
 
         result_index = [
-            index for index, count in Counter(urls_index).items()
-            if count == len(query_words)
-                  ]
-
+                        index for index, count in Counter(urls_index).items()
+                        if count == len(query_words)
+                       ]
         lt = list()
 
         for index in result_index:

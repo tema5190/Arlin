@@ -1,25 +1,29 @@
 from bs4 import BeautifulSoup
 import robotparser
 import urllib2
+from indexer import Indexer
+import re
+from collections import Counter
 
 class Crawler(object):
 
     def __init__(self):
         self.visited_url = set()
         self.root_url = None
+        self.indexer = Indexer()
 
     def pass_robot_txt(self,url):
         robot = robotparser.RobotFileParser()
         robot.set_url(self.root_url)
         robot.read()
 
-        return robot.can_fetch('*',url)#:
+        return robot.can_fetch('*',url)
 
     def define_root_url(self,url):
         self.root_url = url
 
     def add_included_suburls(self,soup):
-        refs = soup.findALL('a')
+        refs = soup.findall('a')
         urls = set()
 
         for ref in refs:
@@ -42,10 +46,48 @@ class Crawler(object):
 
         return urls
 
+    def get_pair_word_and_count(self, soup):
+
+        def visible(element):
+            if element.parent.name in ['head','script','style','document']:
+                return False
+
+            if re.match('<--.*-->',str(element)):
+                return False
+
+            if element == '\n':
+                return False
+
+            return True
+
+
+        data = soup.findALL(text = True)
+
+        visible_text = filter(visible, data)
+        words = list()
+        for text in visible_text:
+            result = re.findall(r'[0-9a-z]',text.lower())
+
+            for res in result:
+                words.append(res)
+
+        self.indexer.add_words(set(words))
+
+        return Counter(words)
+
+
     def visit(self,url,width,depth):
 
+        if depth<0:
+            return
+
         if not self.pass_robot_txt(url):
-           raise Exception("are you idiot?")
+           raise Exception("robot.txt founded")
+
+        cur_url = url
+        self.indexer.add_url(cur_url)
+
+        depth = depth - 1
 
         try:
             html = urllib2.urlopen(url).read()
@@ -64,7 +106,9 @@ class Crawler(object):
                 break
 
             self.visited_url.add(url)
-            width -=1
+            width = width -1
             self.visit(url,width,depth)
 
-        # words = self.
+        words = self.get_pair_word_and_count(soup).iteritems()
+
+        self.indexer.create_index(words,cur_url )
