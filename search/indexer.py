@@ -9,7 +9,8 @@ class Indexer():
             if not Word.objects.filter(text = word).exists():
                 res.append(Word(text=word))
 
-        Word.objects.bulk_create(res) #За раз - не забыть
+        Word.objects.bulk_create(res)
+
 
     def index_url(self,url):
 

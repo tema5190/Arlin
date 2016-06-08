@@ -111,11 +111,11 @@
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="count" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="url_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="word_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="text_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <primary-key columns="id"/>
-      <foreign-key name="#FAKE_search_url_index_1" columns="word_id" ref-table="search_word" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_search_url_index_1" columns="text_id" ref-table="search_word" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="#FAKE_search_url_index_2" columns="url_id" ref-table="search_url" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
-      <index name="search_url_index_83ca49d0" unique="true" columns="word_id"/>
+      <index name="search_url_index_65eb77fe" unique="true" columns="text_id"/>
       <index name="search_url_index_29608e0a" unique="true" columns="url_id"/>
     </table>
     <table name="search_word" schema="" catalog="" type="TABLE">

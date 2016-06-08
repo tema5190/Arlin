@@ -9,8 +9,8 @@
 </head>
 
    <div class="image"></div>
-    <div class="area"></div><nav class="main-menu">
-            <ul>
+   <div class="area"></div><nav class="main-menu">
+                        <ul>
                 <li>
                        <a href="/">
                         <i class="fa fa-home fa-2x"></i>
@@ -18,33 +18,62 @@
                             Домашняя страница
                         </span>
                     </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/known_urls_view">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Знакомые URL
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/indexing_view">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Индексировать URL
+                        </span>
+                    </a>
+
                 </li>
             </ul>
-        </nav>
-    <div class="container">
-   
-      <div class="starter-template" align="center">
+</nav>
+      
+      <div class="container">
+      <div class="starter-template">
         <h1>Добавить URL</h1>
       </div>
 
-      <div align="center">
-        <form  method="GET" action="indexing_url">
-            <input type="url" name="url" style="height: 20px; width: 60%; font-size: 35pt; role: combobox;"/> <br> <br>
-            <table align="left" style="width: 300px;">
+      <div align="left">
+            <form  method="GET" action="indexing_url">
+                <h3 style="margin-left: 38%"> Загрузить файл </h3>
+
+               <input type=file value="Добавить URL из файла"style="margin-left:38%; width:40%; height: 19px;" name="upfile"><BR> </br><input type=SUBMIT id="button2" value="Добавить URL из файла" style="margin-left:38%; width: 25%; height: 34px; font-size: 13px ">
+                <br></br>
+            <input type="url" name="url" id="url" style="height: 30px; width: 28%; font-size: 12pt; role: combobox;"/>
+            <p></p>
+             <table align="left" style="width: 300px;">
               <tr>
                 <td>
-                  Ширина:
-                  <input type="text" name="width" value="1"/>
-
-                  Глубина:
-                  <input type="text" name="depth" value="1"/>
+                  <h2>Ширина:<h2>
+                  <input type="text" id="url2" name="width"/>
+		<br></br>
+                  <h2>Глубина:<h2>
+                  <input type="text" id="url2" name="depth"/>
                 </td>
               </tr>
             </table>
             <br> </br>
-            <input type="submit" align="center" value="Выполнить" style="width: 15%; height: 30px; font-size: 15px" >
+            <p></p>
+            <br></br> <br></br> <br></br><br></br>
+            <input type="submit"name ="add_url" align="center" id="button2" value="Выполнить" style="width: 10%; height: 34px; font-size: 13px" >
+            <br></br>
+
         </form>
       </div>
     </div>
   </body>
 </html>
+

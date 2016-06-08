@@ -8,8 +8,8 @@
     <link href="{% static "css/known.css" %}" rel="stylesheet">
   </head>
     <div class="image"></div>
-  <div class="area"></div><nav class="main-menu">
-            <ul>
+    <div class="area"></div><nav class="main-menu">
+                 <ul>
                 <li>
                        <a href="/">
                         <i class="fa fa-home fa-2x"></i>
@@ -17,15 +17,34 @@
                             Домашняя страница
                         </span>
                     </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/known_urls_view">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Знакомые URL
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/indexing_view">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Индексировать URL
+                        </span>
+                    </a>
+
                 </li>
             </ul>
-        </nav>
-
-    <div class="container">
-        <h1>Cписок URL</h1>
-            <input type="submit" align="center" name="update" value="Обновить" style="width: 40%; height: 25px; font-size: 10px" >
+</nav>
+   <div class="starter-template" align="left">
+        <h1>Список URL</h1>
       </div>
-
+    <div class="container" align="left">
+            <input type="submit" align="left" id="button2" name="update" value="Обновить" style="width: 196%; height: 32px; font-size: 13px" >
+      </div>
 
         {% for url in urls %}
             <h3>{{url.id}}) {{url.url}}</h3>
@@ -34,3 +53,4 @@
     </div>
   </body>
 </html>
+
