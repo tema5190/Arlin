@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import robotparser
 import urllib2
-import re
 
 class Crawler(object):
 
@@ -15,10 +14,6 @@ class Crawler(object):
         robot.read()
 
         return robot.can_fetch('*',url)#:
-        #return True
-        #else:
-        #return False
-
 
     def define_root_url(self,url):
         self.root_url = url
@@ -73,11 +68,3 @@ class Crawler(object):
             self.visit(url,width,depth)
 
         # words = self.
-
-    # def get_html(url):
-    #     response = urllib2.urlopen(url)
-    #     return response.read()
-    #
-    # def parse(html):
-    #     soup = BeautifulSoup(html)
-    #     title = soup.find('title')
