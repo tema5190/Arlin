@@ -1,3 +1,3 @@
 # Arlin
 
-Fuck this lab :(
+Simple search website with simple search engine
